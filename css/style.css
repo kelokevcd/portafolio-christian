@@ -1,6 +1,6 @@
 body {
-	background-color: black;
-	font-family: 'Poppins', sans-serif;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
   margin: auto;
   color: white;
 }
@@ -8,93 +8,136 @@ body {
 /* INICIO DE LA SECCION HEADER */
 
 .header__Container {
-    display: flex; /* se invoca el modulo unidimensional de layout: caja flexible */
-    align-items: center; /* se alinean items verticalmente en "y" */
-    background-color: black; /* color fondo sección */
+  display: flex;
+  /* se invoca el modulo unidimensional de layout: caja flexible */
+  align-items: center;
+  /* se alinean items verticalmente en "y" */
+  background-color: black;
+  /* color fondo sección */
 }
 
 .logo__Img {
-    width: 10%; /* tamaño del logo */
-    padding: 0 3%;
+  width: 10%;
+  /* tamaño del logo */
+  padding: 0 3%;
 }
 
 .navbar {
-    display:flex;
-    width: 92%; /* restante asignado a la navbar */
-    justify-content: flex-end; /* alinea link acia el final de la fila */
+  display: flex;
+  width: 92%;
+  /* restante asignado a la navbar */
+  justify-content: flex-end;
+  /* alinea link acia el final de la fila */
 
 }
 
 .navbar__Links {
-    display: flex;
-    width: 10%; /* ancho de cada link */
-    text-decoration: none; /* eliminar el subrayado del link */
-    color: white; /* color letra de cada link */
-    justify-content: center;
+  display: flex;
+  width: 10%;
+  /* ancho de cada link */
+  text-decoration: none;
+  /* eliminar el subrayado del link */
+  color: white;
+  /* color letra de cada link */
+  justify-content: center;
 
 }
 
 /* INICIA PERSONALIZACION DE LA CLASE BOTÓN EN ARAS DE ANIMARLA */
 
 .button {
-    /*font-size: 17px;*/
-    background: transparent; /* para que aqdopte el color de fondo de la pagina */
-    border: none; /* para que elimine el borde del botón */
-    padding: 1em; /* para definir el tamaño del botón */
-    position: relative; /* indica que es un elemento posicionado y que los pseudoelementos se sicionan teniendolo como referencia. */
-    transition: .5s ease; /* duracion y efecto de la animacion */
-    z-index: 2; /* el elemento tiene prelacion sobre los pseudoelementos */
-  }
-  
-  .button::before { /* pseudoelemento para crear la línea animada que se extiende */
-    content: ''; /* no tendrá ningún contenido */
-    position: absolute; /* se ubicará en relacion con el elemento padre que es el botón */
-    left: 0; /* la linea inicia en el valor 0 de la parte izq */
-    bottom: 0; /* la linea inicia en el valor 0 de la parte de abajo */
-    height: 2px; /* el grosor de la línea */
-    width: 0; /*la línea inicia no mostrandose (para la animacion)*/
-    background-color: #fcfcfc; /* indica el color de la linea */
-    transition: .5s ease; /* duracion y efecto de la animacion */
-    z-index: -1; /* la prelacion es por debajo del botón */
-  }
-  
-  .button:hover { /* cuando el mouse se pone sobre el botón */
-    color: black; /* color del texto que mostrará */
-    transition-delay: .5s; /* que tan lenta será la animacion */
-    
-  }
-  
-  .button:hover::before { /* funciona cuando el mouse se coloca sobre el boton*/
-    width: 100%; /* hace que la línea se extienda de lado a lado hasta que se complete */ 
-    
-  }
-  
-  .button::after { /*para el inicio de la animacion */
-    content: ''; /*sin contenido*/
-    position: absolute; /* se ubica según su padre*/
-    left: 0; /* la linea inicia en el valor 0 de la parte izq */
-    bottom: 0; /* la linea inicia en el valor 0 de la parte de abajo */
-    height: 0; /* el grosor de la línea al inicio */
-    width: 100%; /* indica que ocupará todo el espacio de lado a lado */
-    transition: .4s ease; /* duracion y efecto de la transicion */
-    z-index: -2; /* configura que el elemento quede detrás de los demás */
-    border-radius: 3px 3px 0 0; /* redondear bordes solo superiores */
-  }
-  
-  .button:hover::after {
-    height: 100%; /* indica la altura a la que se extenderá el fondo rojo */
-    transition-delay: 0.4s; /*retraso de la animacion */
-    background-color: rgb(47, 255, 144); /* color de fondo que se extiende */
-  }
-  
-  /* FIN DE LA SECCION HEADER */
+  /*font-size: 17px;*/
+  background: transparent;
+  /* para que aqdopte el color de fondo de la pagina */
+  border: none;
+  /* para que elimine el borde del botón */
+  padding: 1em;
+  /* para definir el tamaño del botón */
+  position: relative;
+  /* indica que es un elemento posicionado y que los pseudoelementos se sicionan teniendolo como referencia. */
+  transition: .5s ease;
+  /* duracion y efecto de la animacion */
+  z-index: 2;
+  /* el elemento tiene prelacion sobre los pseudoelementos */
+}
+
+.button::before {
+  /* pseudoelemento para crear la línea animada que se extiende */
+  content: '';
+  /* no tendrá ningún contenido */
+  position: absolute;
+  /* se ubicará en relacion con el elemento padre que es el botón */
+  left: 0;
+  /* la linea inicia en el valor 0 de la parte izq */
+  bottom: 0;
+  /* la linea inicia en el valor 0 de la parte de abajo */
+  height: 2px;
+  /* el grosor de la línea */
+  width: 0;
+  /*la línea inicia no mostrandose (para la animacion)*/
+  background-color: #fcfcfc;
+  /* indica el color de la linea */
+  transition: .5s ease;
+  /* duracion y efecto de la animacion */
+  z-index: -1;
+  /* la prelacion es por debajo del botón */
+}
+
+.button:hover {
+  /* cuando el mouse se pone sobre el botón */
+  color: black;
+  /* color del texto que mostrará */
+  transition-delay: .5s;
+  /* que tan lenta será la animacion */
+
+}
+
+.button:hover::before {
+  /* funciona cuando el mouse se coloca sobre el boton*/
+  width: 100%;
+  /* hace que la línea se extienda de lado a lado hasta que se complete */
+
+}
+
+.button::after {
+  /*para el inicio de la animacion */
+  content: '';
+  /*sin contenido*/
+  position: absolute;
+  /* se ubica según su padre*/
+  left: 0;
+  /* la linea inicia en el valor 0 de la parte izq */
+  bottom: 0;
+  /* la linea inicia en el valor 0 de la parte de abajo */
+  height: 0;
+  /* el grosor de la línea al inicio */
+  width: 100%;
+  /* indica que ocupará todo el espacio de lado a lado */
+  transition: .4s ease;
+  /* duracion y efecto de la transicion */
+  z-index: -2;
+  /* configura que el elemento quede detrás de los demás */
+  border-radius: 3px 3px 0 0;
+  /* redondear bordes solo superiores */
+}
+
+.button:hover::after {
+  height: 100%;
+  /* indica la altura a la que se extenderá el fondo rojo */
+  transition-delay: 0.4s;
+  /*retraso de la animacion */
+  background-color: rgb(47, 255, 144);
+  /* color de fondo que se extiende */
+}
+
+/* FIN DE LA SECCION HEADER */
 
 
 /* INICIO DE LA SECCION BANNER */
 
 .banner {
   display: flex;
-  
+
 }
 
 .banner__Texts-Button {
@@ -113,9 +156,9 @@ body {
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgb(47, 255, 144),
-        0 0 25px rgb(47, 255, 144),
-        0 0 50px rgb(47, 255, 144),
-        0 0 100px rgb(47, 255, 144);
+    0 0 25px rgb(47, 255, 144),
+    0 0 50px rgb(47, 255, 144),
+    0 0 100px rgb(47, 255, 144);
 }
 
 .banner__Texts-Title {
@@ -149,7 +192,7 @@ body {
   align-items: center;
 }
 
-.banner__Container-Rrss-logos{
+.banner__Container-Rrss-logos {
   width: 70px;
   height: 50px;
   border-radius: 30px;
@@ -158,7 +201,7 @@ body {
 }
 
 .banner__Image {
-  background-image: url('../img/Ivan\ Nagles\ b_black.png');
+  background-image: url('../img/cristian\ panduro_black.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,24 +233,41 @@ body {
 }
 
 progress {
-  width: 80%; /* ancho del espacio de la barra */
-  height: 10px; /* alto de la barra */
-  background: rgb(47, 255, 144); /* fondo de la barra*/
-  padding: 0.1rem; /*separacion interna */ 
-  border-radius: 5px; /*borde redondeado */
+  width: 80%;
+  /* ancho del espacio de la barra */
+  height: 10px;
+  /* alto de la barra */
+  background: rgb(47, 255, 144);
+  /* fondo de la barra*/
+  padding: 0.1rem;
+  /*separacion interna */
+  border-radius: 5px;
+  /*borde redondeado */
 }
 
 .about__Progress-Bar-List {
-  animation: progress 15s linear forwards; /*nombre de la animacion, duracion, tipo movimiento, direccion */
+  animation: progress 15s linear forwards;
+  /*nombre de la animacion, duracion, tipo movimiento, direccion */
 }
 
-@keyframes progress { /*nombre de la animacion */
-  from { width: 50%; } /*la barra debe comenzar en*/
-  to { width: 100%; } /*la animacion de la barra termina en lo que se parametrizó*/
+@keyframes progress {
+
+  /*nombre de la animacion */
+  from {
+    width: 50%;
+  }
+
+  /*la barra debe comenzar en*/
+  to {
+    width: 100%;
+  }
+
+  /*la animacion de la barra termina en lo que se parametrizó*/
 }
 
 progress::-webkit-progress-value {
-  background-color: rgb(47, 255, 144); /* el color de la barra de progreso */
+  background-color: rgb(47, 255, 144);
+  /* el color de la barra de progreso */
 }
 
 .about__Container-Title {
@@ -231,21 +291,29 @@ progress::-webkit-progress-value {
 
 .about__Container-Table {
   margin: 0 5%;
-  line-height: 2rem; /* espacio de interlineado */
-  font-weight: 200; /* como una negrilla al texto */
-  width: 90%; /* espacio a utilizar */
-  opacity: 60%; /* nivel de opacidad del contenido de la tabla */
-  
+  line-height: 2rem;
+  /* espacio de interlineado */
+  font-weight: 200;
+  /* como una negrilla al texto */
+  width: 90%;
+  /* espacio a utilizar */
+  opacity: 60%;
+  /* nivel de opacidad del contenido de la tabla */
+
 }
 
-th, td {
-  letter-spacing: 1px; /* espaciado de las letras para que sea más legible */
+th,
+td {
+  letter-spacing: 1px;
+  /* espaciado de las letras para que sea más legible */
 }
 
- .contacto {
+.contacto {
   color: white;
-  text-decoration: none; /* eliminar el subrayado de los links */
-  cursor: pointer; /* a manito cuando el ursor está sobre un link */
+  text-decoration: none;
+  /* eliminar el subrayado de los links */
+  cursor: pointer;
+  /* a manito cuando el ursor está sobre un link */
 }
 
 .about__Container-CV {
@@ -274,9 +342,9 @@ th, td {
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgb(47, 255, 144),
-        0 0 25px rgb(47, 255, 144),
-        0 0 50px rgb(47, 255, 144),
-        0 0 100px rgb(47, 255, 144);
+    0 0 25px rgb(47, 255, 144),
+    0 0 50px rgb(47, 255, 144),
+    0 0 100px rgb(47, 255, 144);
 }
 
 
@@ -287,64 +355,96 @@ th, td {
 /* INICIA SECCION MY SKILLS */
 
 .my-Skills__title {
-  font-size: xx-large;/* tamaño de la fuente */
-  width: 100%; /* espacio de ancho a utilizar*/
-  text-align: center; /* centra el texto en el espacio asignado */
-  padding: 3rem 0; /* espaciado vertical */
+  font-size: xx-large;
+  /* tamaño de la fuente */
+  width: 100%;
+  /* espacio de ancho a utilizar*/
+  text-align: center;
+  /* centra el texto en el espacio asignado */
+  padding: 3rem 0;
+  /* espaciado vertical */
 }
 
 .my-skills__Containers-Group {
-  display: flex; 
-  flex-direction: row; /* disposición de la orientación de todos los containers */ 
-  flex-wrap: wrap; /* según el tamaño de la ventana se auto ajustan enviando los divs restantes abajo. */
+  display: flex;
+  flex-direction: row;
+  /* disposición de la orientación de todos los containers */
+  flex-wrap: wrap;
+  /* según el tamaño de la ventana se auto ajustan enviando los divs restantes abajo. */
 }
 
 .my-Skills__Container {
   display: flex;
-  width: calc(100% / 10);/* ancho del container */
-  height: 25%; /* altura del circular progress */
-  padding: 20px 0; /* padding sup e inf, laterales */
-  border-radius: 8px; /*borde redondeado del container*/
-  background: rgba(92, 86, 86, 0.778); /* fondo del container*/
-  row-gap: 20px; /* espacio vertical entre el circular bar y el texto */
-  flex-direction: column; /* orientacion del circular progress */
-  align-items: center; /* centra elementos en el container*/
+  width: calc(100% / 10);
+  /* ancho del container */
+  height: 25%;
+  /* altura del circular progress */
+  padding: 20px 0;
+  /* padding sup e inf, laterales */
+  border-radius: 8px;
+  /*borde redondeado del container*/
+  background: rgba(92, 86, 86, 0.778);
+  /* fondo del container*/
+  row-gap: 20px;
+  /* espacio vertical entre el circular bar y el texto */
+  flex-direction: column;
+  /* orientacion del circular progress */
+  align-items: center;
+  /* centra elementos en el container*/
   margin: 2% 1% 2% 5%;
 
 }
 
 .my-Skills__Circular-Bar {
-  position: relative; /* determino ubicacion */
-  height: 90px; /* altura del circulo externo */
-  width: 90px; /* ancho del circulo externo */
-  border-radius: 50%; /*borde redondeado */
-  background: conic-gradient( red 3.6deg, rgb(47, 255, 144) 0deg); /* colores del circular progress*/
+  position: relative;
+  /* determino ubicacion */
+  height: 90px;
+  /* altura del circulo externo */
+  width: 90px;
+  /* ancho del circulo externo */
+  border-radius: 50%;
+  /*borde redondeado */
+  background: conic-gradient(red 3.6deg, rgb(47, 255, 144) 0deg);
+  /* colores del circular progress*/
   display: flex;
-  align-items: center; /*centrado de elementos en y */
-  justify-content: center; /*centrado de elementos en y */
+  align-items: center;
+  /*centrado de elementos en y */
+  justify-content: center;
+  /*centrado de elementos en y */
 }
 
 .my-Skills__Circular-Bar::before {
   content: "";
-  position: absolute; /* su ubicacion estará por dentro de la posicion del elemento padre */
-  height: 70px; /* altura del circulo interno */
-  width: 70px; /* ancho del circulo interno */
-  border-radius: 50%; /* borde redondeado */ 
-  background-color: #fff; /* color de fondo del centro del circular bar */
+  position: absolute;
+  /* su ubicacion estará por dentro de la posicion del elemento padre */
+  height: 70px;
+  /* altura del circulo interno */
+  width: 70px;
+  /* ancho del circulo interno */
+  border-radius: 50%;
+  /* borde redondeado */
+  background-color: #fff;
+  /* color de fondo del centro del circular bar */
 }
 
 .my-Skills__Circular-Bar__Progress-value {
   position: relative;
-  font-size: 20px; /* tamaño de letra del porcentaje */
-  font-weight: 600; /* negrilla del porcentaje */
-  color: rgb(0, 0, 0); /* color del porcentaje */
+  font-size: 20px;
+  /* tamaño de letra del porcentaje */
+  font-weight: 600;
+  /* negrilla del porcentaje */
+  color: rgb(0, 0, 0);
+  /* color del porcentaje */
 
 }
 
 .my-Skills__Circular-Bar__Header-Text {
-  font-size: 15px; /* tamaño del texto del Skill */
-  font-weight: 500; /* negrilla del texto */
-  color: #fff; /* color del texto del header */
+  font-size: 15px;
+  /* tamaño del texto del Skill */
+  font-weight: 500;
+  /* negrilla del texto */
+  color: #fff;
+  /* color del texto del header */
   text-align: center;
 }
 
@@ -353,125 +453,63 @@ th, td {
 /* INICIO DE LA SECCION PORTFOLIO */
 
 .portfolio__Title {
-  font-size: xx-large;/* tamaño de la fuente */
-  width: 100%; /* espacio de ancho a utilizar*/
-  text-align: center; /* centra el texto en el espacio asignado */
-  padding: 4rem 0; /* espaciado vertical */
+  font-size: xx-large;
+  /* tamaño de la fuente */
+  width: 100%;
+  /* espacio de ancho a utilizar*/
+  text-align: center;
+  /* centra el texto en el espacio asignado */
+  padding: 4rem 0;
+  /* espaciado vertical */
 }
 
-.portfolio__Barbershop{
+.portfolio__Projects {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 0 5%;
+  margin-bottom: 5rem;
+}
+
+.portfolio__Project {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
-.portfolio__Barbershop-Img {
-  width: 700px;
-  height: 400px;
-  margin: 0 0 5% 5%;
+.portfolio__Project-Img {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
   box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
+  border: 2px solid rgb(47, 255, 144);
 }
 
-.portfolio__Text-Right {
-  margin: 0 15%;
-  padding: 0 0 1rem 0;
+.portfolio__Project-Info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.portfolio__Text-Description-Right {
-  margin-left: 15%;
-  padding: 1rem 1rem 2rem 0;
-  line-height: 1.5rem;
-}
+.portfolio__Text-Right,
 .portfolio__Text-Left {
-  margin-left: 15%;
+  margin: 0;
   padding: 0 0 1rem 0;
+  font-size: 1.5rem;
 }
 
+.portfolio__Text-Description-Right,
 .portfolio__Text-Description-Left {
-  margin-left: 15%;
-  padding: 1rem 0 2rem 0;
+  margin: 0;
+  padding: 0 0 2rem 0;
   line-height: 1.5rem;
-}
-
-.portfolio__Fruit{
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Fruit-Img {
-  width: 700px;
-  height: 400px;
-  align-items: flex-end;
-  margin: 5% 5% 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
-}
-
-.portfolio__Mini {
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Mini-Img {
-  width: 700px;
-  height: 400px;
-  margin: 5% 0 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
-}
-
-.portfolio__Apeperia{
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Apeperia-Img {
-  width: 700px;
-  height: 400px;
-  align-items: flex-end;
-  margin: 5% 5% 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
-}
-
-.portfolio__Portfolio {
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Portfolio-Img {
-  width: 700px;
-  height: 400px;
-  margin: 5% 0 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
-}
-
-.portfolio__Encoder{
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Encoder-Img {
-  width: 700px;
-  height: 400px;
-  align-items: flex-end;
-  margin: 5% 5% 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
-}
-
-.portfolio__Paint {
-  display: flex;
-  align-items: center;
-}
-
-.portfolio__Paint-Img {
-  width: 700px;
-  height: 400px;
-  margin: 5% 0 5% 5%;
-  box-shadow: 11px -9px 16px -3px rgb(47, 255, 144), -13px 14px 16px -3px rgb(47, 255, 144);
-  border-radius: 5px;
+  font-weight: 300;
+  color: #ccc;
 }
 
 .portfolio__Button {
@@ -482,7 +520,7 @@ th, td {
   font-weight: 500;
   border-radius: 3px;
   padding: 0.5rem 3rem;
-  margin: 0 15%;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -491,9 +529,9 @@ th, td {
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgb(47, 255, 144),
-        0 0 25px rgb(47, 255, 144),
-        0 0 50px rgb(47, 255, 144),
-        0 0 100px rgb(47, 255, 144);
+    0 0 25px rgb(47, 255, 144),
+    0 0 50px rgb(47, 255, 144),
+    0 0 100px rgb(47, 255, 144);
 }
 
 /* FIN DE LA SECCION PORTAFOLIO */
@@ -501,10 +539,14 @@ th, td {
 /* INICIO DE LA SECCION FORMULARIO */
 
 .form__Title {
-  font-size: xx-large;/* tamaño de la fuente */
-  width: 100%; /* espacio de ancho a utilizar*/
-  text-align: center; /* centra el texto en el espacio asignado */
-  padding: 4rem 0; /* espaciado vertical */
+  font-size: xx-large;
+  /* tamaño de la fuente */
+  width: 100%;
+  /* espacio de ancho a utilizar*/
+  text-align: center;
+  /* centra el texto en el espacio asignado */
+  padding: 4rem 0;
+  /* espaciado vertical */
 }
 
 .form_Container {
@@ -541,7 +583,8 @@ form {
   color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -551,7 +594,8 @@ input, textarea {
   color: #fff;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 10px rgb(47, 255, 144);
 }
@@ -577,15 +621,18 @@ input:focus, textarea:focus {
   color: black;
   border-radius: 5px;
   box-shadow: 0 0 5px rgb(47, 255, 144),
-        0 0 25px rgb(47, 255, 144),
-        0 0 50px rgb(47, 255, 144),
-        0 0 100px rgb(47, 255, 144);
+    0 0 25px rgb(47, 255, 144),
+    0 0 50px rgb(47, 255, 144),
+    0 0 100px rgb(47, 255, 144);
 }
 
 .input-message-error {
-  display: none; /* ocultar el mensaje de error por defecto */
-  color: red; /* color de texto del mensaje de error */
-  font-size: 14px; /* tamaño de fuente del mensaje de error */
-  margin-top: 5px; /* margen superior del mensaje de error */
+  display: none;
+  /* ocultar el mensaje de error por defecto */
+  color: red;
+  /* color de texto del mensaje de error */
+  font-size: 14px;
+  /* tamaño de fuente del mensaje de error */
+  margin-top: 5px;
+  /* margen superior del mensaje de error */
 }
-
