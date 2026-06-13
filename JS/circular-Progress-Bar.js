@@ -6,15 +6,17 @@ const progressValues = document.querySelectorAll('.my-Skills__Circular-Bar__Prog
 // Defino los porcentajes de cada habilidad
 const percentages = {
   'HTML': 80,
-  'CSS': 70,
-  'Javascript': 30,
-  'Git': 80,
+  'CSS': 60,
+  'Javascript': 60,
+  'Git': 70,
+  'Node JS': 40,
+  'Python': 40,
+  'Cloud': 70,
+  // Other unused ones kept just in case
   'SFPC': 95,
-  'Node JS': 30,
   'Linux Unhatched': 90,
   'CCNA': 80,
   'IP': 90,
-  'Cloud': 40,
   'FB': 80,
   'cabling': 80,
 };
