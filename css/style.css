@@ -164,7 +164,7 @@ body {
 .banner__Texts-Title {
   margin: 5% 0 5% 10%;
   font-size: 3rem;
-  width: 100%;
+  width: 85%;
 }
 
 .banner__Texts-Subtitle {
@@ -173,13 +173,13 @@ body {
 }
 
 .banner__Texts-Paragraph {
-  margin: 10%;
+  margin: 5% 10%;
   line-height: 1.5rem;
   font-size: smaller;
   font-weight: 200;
   letter-spacing: 1px;
   opacity: 60%;
-  width: 100%;
+  width: 80%;
   /* text-shadow: 1px 1px 1px rgb(0, 0, 0); */
 }
 
@@ -552,16 +552,19 @@ td {
 .form_Container {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
 }
 
 form {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   background-color: #222;
   padding: 30px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .form__Label {
@@ -635,4 +638,119 @@ textarea:focus {
   /* tamaño de fuente del mensaje de error */
   margin-top: 5px;
   /* margen superior del mensaje de error */
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media screen and (max-width: 1024px) {
+  .my-Skills__Container {
+    width: calc(100% / 5 - 6%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__Container {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  .logo__Img {
+    width: 30%;
+    margin-bottom: 1rem;
+  }
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .navbar__Links {
+    width: auto;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner__Texts-Button, .banner__Texts-Title, .banner__Texts-Subtitle {
+    margin: 5% auto;
+    width: 90%;
+  }
+  .banner__Texts-Paragraph {
+    margin: 5% auto;
+    width: 90%;
+    text-align: center;
+  }
+  .banner__Container-Rrss {
+    margin: 2rem auto;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .banner__Image {
+    width: 80%;
+    height: 60vh;
+    margin-top: 2rem;
+  }
+  .about-me {
+    flex-direction: column;
+  }
+  .about__Progress-Container, .about__Container {
+    width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+  .about__Container-Table {
+    width: 100%;
+    margin: 0;
+  }
+  .my-Skills__Container {
+    width: calc(100% / 3 - 6%);
+  }
+  .portfolio__Project {
+    flex-direction: column;
+  }
+  .portfolio__Project-Img, .portfolio__Project-Info {
+    width: 100%;
+  }
+  .portfolio__Text-Right, .portfolio__Text-Left {
+    text-align: center;
+    width: 100%;
+  }
+  .portfolio__Text-Description-Right, .portfolio__Text-Description-Left {
+    text-align: center;
+    width: 100%;
+  }
+  .portfolio__Button {
+    margin: 0 auto;
+  }
+  .form_Container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .my-Skills__Container {
+    width: calc(100% / 2 - 6%);
+  }
+  .banner__Texts-Title {
+    font-size: 2rem;
+  }
+  .logo__Img {
+    width: 50%;
+  }
+  .about__Container-Table {
+    display: block;
+    overflow-x: auto;
+  }
+  td, th {
+    display: block;
+    width: 100%;
+  }
+  .form_Container {
+    width: 95%;
+  }
+  form {
+    padding: 15px;
+  }
 }
